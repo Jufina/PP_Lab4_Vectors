@@ -79,6 +79,15 @@ public class Vector {
         return rez;
     }
 
+    //Возвращает угол в радианах между двумя векторами
+    public static double angle(Vector a,Vector b){
+        double absA=Math.sqrt(a.getX()*a.getX()+a.getY()*a.getY()+a.getZ()*a.getZ());
+        double absB=Math.sqrt(b.getX()*b.getX()+b.getY()*b.getY()+b.getZ()*b.getZ());
+        return Math.acos(dotProduct(a,b)/(absA*absB));
+    }
+
+
+
 
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
