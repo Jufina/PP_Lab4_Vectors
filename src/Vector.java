@@ -71,4 +71,13 @@ public class Vector {
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
     }
+
+    //Сложение векторов
+    public static Vector sum(Vector a,Vector b,String name){
+        return new Vector(a.getX()+b.getX(),a.getY()+b.getY(),a.getZ()+b.getZ(),name);
+    }
+    //Вычитание векторов
+    public static Vector sub(Vector a,Vector b,String name){
+        return new Vector(a.getX()-b.getX(),a.getY()-b.getY(),a.getZ()-b.getZ(),name);
+    }
 }
