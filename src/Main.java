@@ -13,5 +13,9 @@ public class Main {
         System.out.println(Axyz);
         System.out.println(Some);
         System.out.println(Some2);
+
+        Vector forMultiple;
+        forMultiple=Axyz.multiple(-4,"forMultiple");
+        System.out.println(forMultiple);
     }
 }

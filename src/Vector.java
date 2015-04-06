@@ -71,4 +71,7 @@ public class Vector {
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
     }
+    public Vector multiple(int l, String name) {
+        return new Vector(x*l,y*l,z*l,name);
+    }
 }
