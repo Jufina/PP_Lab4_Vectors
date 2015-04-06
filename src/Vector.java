@@ -71,4 +71,10 @@ public class Vector {
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
     }
+
+    //Смешанное произведение
+    public static double tripleProduct(Vector a,Vector b,Vector c){
+        return a.getX()*(b.getY()*c.getZ()-b.getZ()*c.getY())-
+                a.getY()*(b.getX()*c.getZ()-b.getZ()*c.getX())+
+                a.getZ()*(b.getX()*c.getY()-b.getY()*c.getX());    }
 }
