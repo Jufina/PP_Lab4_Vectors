@@ -107,11 +107,11 @@ public class Vector {
         return Math.sqrt((a.getX()*a.getX())+(a.getY()*a.getY())+(a.getZ()*a.getZ()));
     }
 
-    public Vector multiple(int l, String name) {
-        return new Vector(x*l,y*l,z*l,name);
+    public static Vector multiple(Vector a, int l, String name) {
+        return new Vector(a.getX()*l,a.getY()*l,a.getZ()*l,name);
     }
-    public Vector multiple(double l, String name) {
-        return new Vector(x*l,y*l,z*l,name);
+    public static Vector multiple(Vector a, double l, String name) {
+        return new Vector(a.getX()*l,a.getY()*l,a.getZ()*l,name);
     }
 
 
