@@ -8,7 +8,14 @@ public class Main {
         Vector Some,Some2;
         Some=Vector.composeVector(2,-7,11,-5,"Some");
         Some2=Vector.composeVector(2,5,3,4,1,6,"Some2");
+        //Тестирование длины вектора от котеечки
+        System.out.println("--------------------^_^---------------------");
+        Vector vector=new Vector(4,3,0,"Lichinka");
 
+        //Тест смешанного произведения
+        System.out.println(Vector.lengthVector(vector));
+
+        System.out.println("--------------------^_^---------------------");
         System.out.println(Axy);
         System.out.println(Axyz);
         System.out.println(Some);
