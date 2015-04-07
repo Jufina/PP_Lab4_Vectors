@@ -8,6 +8,16 @@ public class Main {
         Vector Some,Some2;
         Some=Vector.composeVector(2,-7,11,-5,"Some");
         Some2=Vector.composeVector(2,5,3,4,1,6,"Some2");
+        //Тестирование функций сотворённых старостой
+        System.out.println("---------------------------------------------");
+        Vector v1=new Vector(1,1,1,"pervii");
+        Vector v2=new Vector(1,1,0,"vtoroi");
+        Vector v3=new Vector(6,6,6,"bezimyannii");
+
+        //Тест смешанного произведения
+        System.out.println(Vector.tripleProduct(v1, v2, v3));
+
+        System.out.println("---------------------------------------------");
 
         //Тестирование функций сотворённых старостой
         System.out.println("---------------------------------------------");
