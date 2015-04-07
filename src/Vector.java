@@ -93,6 +93,15 @@ public class Vector {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
     }
 
+    //Сложение векторов
+    public static Vector sum(Vector a,Vector b,String name){
+        return new Vector(a.getX()+b.getX(),a.getY()+b.getY(),a.getZ()+b.getZ(),name);
+    }
+    //Вычитание векторов
+    public static Vector sub(Vector a,Vector b,String name){
+        return new Vector(a.getX()-b.getX(),a.getY()-b.getY(),a.getZ()-b.getZ(),name);
+    }
+
     //Вычисление длины вектора
     public static double lengthVector(Vector a){
         return Math.sqrt((a.getX()*a.getX())+(a.getY()*a.getY())+(a.getZ()*a.getZ()));
