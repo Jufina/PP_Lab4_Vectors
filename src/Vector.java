@@ -71,4 +71,10 @@ public class Vector {
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
     }
+
+    //Вычисление длины вектора
+    public static double lengthVector(Vector a){
+        return Math.sqrt((a.getX()*a.getX())+(a.getY()*a.getY())+(a.getZ()*a.getZ()));
+    }
+
 }
