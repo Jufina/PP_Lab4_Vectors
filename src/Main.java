@@ -24,12 +24,6 @@ public class Main {
         System.out.println(Vector.crossProduct(v3,v2,"Vektornoeproyzvedenie").toString());
 
 
-        //Тестирование функций сотворённых старостой
-        System.out.println("---------------------------------------------");
-        Vector v1=new Vector(1,1,1,"pervii");
-        Vector v2=new Vector(1,1,0,"vtoroi");
-        Vector v3=new Vector(6,6,6,"bezimyannii");
-
         //Тест сложения
         System.out.println(Vector.sum(v2,v3,"slogennie").toString());
         //Тест вычитания
