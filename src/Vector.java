@@ -67,6 +67,27 @@ public class Vector {
         return new Vector(xend-xbeg,yend-ybeg, name);
     }
 
+    //Скалярное произведение
+    public static double dotProduct(Vector a,Vector b){
+        return a.getX()*b.getX()+a.getY()*b.getY()+a.getZ()*b.getZ();
+    }
+    //Векторное произведение
+    public static Vector crossProduct(Vector a,Vector b,String name){
+        Vector rez=new Vector((a.getY()*b.getZ()-a.getZ()*b.getY()),
+                -(a.getX()*b.getZ()-a.getZ()*b.getX()),
+                (a.getX()*b.getY()-a.getY()*b.getX()),name);
+        return rez;
+    }
+
+    //Возвращает угол в радианах между двумя векторами
+    public static double angle(Vector a,Vector b){
+        double absA=Math.sqrt(a.getX()*a.getX()+a.getY()*a.getY()+a.getZ()*a.getZ());
+        double absB=Math.sqrt(b.getX()*b.getX()+b.getY()*b.getY()+b.getZ()*b.getZ());
+        return Math.acos(dotProduct(a,b)/(absA*absB));
+    }
+
+
+
 
     public static Vector composeVector(double xbeg, double ybeg,double zbeg, double xend, double yend, double zend, String name) {
         return new Vector(xend-xbeg,yend-ybeg,zend-zbeg, name);
@@ -83,4 +104,6 @@ public class Vector {
     public Vector multiple(double l, String name) {
         return new Vector(x*l,y*l,z*l,name);
     }
+
+
 }
