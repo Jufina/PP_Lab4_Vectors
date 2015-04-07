@@ -74,4 +74,7 @@ public class Vector {
     public Vector multiple(int l, String name) {
         return new Vector(x*l,y*l,z*l,name);
     }
+    public Vector multiple(double l, String name) {
+        return new Vector(x*l,y*l,z*l,name);
+    }
 }
